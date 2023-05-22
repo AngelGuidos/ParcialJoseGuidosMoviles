@@ -5,23 +5,33 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import com.galacticstudio.parcialjoseguidos.R
+import com.galacticstudio.parcialjoseguidos.databinding.FragmentLagoBinding
+import com.galacticstudio.parcialjoseguidos.ui.lake.viewmodel.LakeViewModel
 
 
 class LagoFragment : Fragment() {
 
+    private lateinit var binding: FragmentLagoBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
+    private val lakeViewModel: LakeViewModel by activityViewModels {
+        LakeViewModel.Factory
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lago, container, false)
+        binding = FragmentLagoBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.viewmodel = lakeViewModel
+        binding.lifecycleOwner = viewLifecycleOwner
     }
 
 }
