@@ -5,12 +5,12 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.galacticstudio.parcialjoseguidos.ui.lake.LakeViewModel" />
+            type="com.galacticstudio.parcialjoseguidos.ui.lake.viewmodel.LakeViewModel" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.lake.AddLagoFragment" >
+        tools:context=".ui.lake.addlake.AddLagoFragment" >
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout"

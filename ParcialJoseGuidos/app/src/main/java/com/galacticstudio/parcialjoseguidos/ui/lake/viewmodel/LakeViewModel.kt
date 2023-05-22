@@ -1,4 +1,4 @@
-package com.galacticstudio.parcialjoseguidos.ui.lake
+package com.galacticstudio.parcialjoseguidos.ui.lake.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -48,6 +48,12 @@ class LakeViewModel(private val repository: LakeRepository): ViewModel() {
     }
     fun clearStatus(){
         status.value = INACTIVE
+    }
+
+    fun setSelectedItem(lake: LakeModel){
+        clearData()
+        name.value = lake.name
+        surface.value = lake.surface
     }
 
     companion object {

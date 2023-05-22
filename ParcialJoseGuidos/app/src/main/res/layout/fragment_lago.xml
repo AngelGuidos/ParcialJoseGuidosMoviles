@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.galacticstudio.parcialjoseguidos.ui.lake.LakeViewModel" />
+            type="com.galacticstudio.parcialjoseguidos.ui.lake.viewmodel.LakeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

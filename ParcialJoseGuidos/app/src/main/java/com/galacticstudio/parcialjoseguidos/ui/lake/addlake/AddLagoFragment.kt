@@ -1,4 +1,4 @@
-package com.galacticstudio.parcialjoseguidos.ui.lake
+package com.galacticstudio.parcialjoseguidos.ui.lake.addlake
 
 import android.os.Bundle
 import android.util.Log
@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.galacticstudio.parcialjoseguidos.R
 import com.galacticstudio.parcialjoseguidos.databinding.FragmentAddLagoBinding
+import com.galacticstudio.parcialjoseguidos.ui.lake.viewmodel.LakeViewModel
 
 class AddLagoFragment : Fragment() {
 
